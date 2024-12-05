@@ -74,7 +74,7 @@ if (!isset($_SESSION['usuario_id'])) {
             </div>
         </article>
         <article class="servicios">
-            <img src="images/Chapisteria y Pintura" alt="Noticia 2">
+            <img src="images/Chapisteria y Pintura.png" alt="Noticia 2">
             <div>
                 <h3>Chapisteria y Pintura</h3>
                 <p>Los mejores profesionales de al pintura y chapisteria automotriz a su disposicion</p>
