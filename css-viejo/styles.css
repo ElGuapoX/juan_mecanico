@@ -1,0 +1,1079 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    height: 100%; /* Ocupa toda la altura de la ventana */
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina rellenos predeterminados */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    background-color: #3d3d3d; /* Fondo del header */
+    padding: 0 20px; /* Padding en los lados del header */
+    height: 70px; /* Establece una altura fija para el header */
+}
+
+.header-content {
+    display: flex;
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+.header-content img.logo {
+    max-height: 350px; /* Establece la altura máxima del logo */
+    width: 350px; /* Mantiene la proporción del logo */
+    margin-right: 20px; /* Espacio entre el logo y el siguiente elemento */
+}
+
+.header-content .contact-info {
+    color: white;
+    margin-right: 20px; /* Espacio entre el texto de contacto y el siguiente elemento */
+}
+
+.header-content .hours {
+    color: white;
+    margin-right: 20px; /* Espacio entre el horario y el siguiente elemento */
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #ff7a2d;
+    color: white;
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espacio entre el ícono y el texto */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1001;
+}
+
+.dropbtn:hover {
+    background-color: #e5681c;
+    transform: scale(1.05); /* Ligero aumento al pasar el mouse */
+}
+
+/* The container <div> */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    right: 0; /* Alineado al lado derecho */
+    z-index: 1;
+    padding: 0.5rem 0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    display: block;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #ff7a2d;
+    color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Optional: Links container for styling flexibility */
+.Enlaces-paginas {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: white;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .dropbtn {
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .dropdown-content {
+        min-width: 150px;
+    }
+
+    .dropdown-content a {
+        font-size: 0.9rem;
+    }
+}
+
+
+.Enlace {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 0;
+    background-color: #ffffff; /* Cambia este color a lo que desees */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin: 10px;
+    width: 300px; /* Fija el ancho */
+    height: 250px; /* Fija la altura */
+    text-decoration: none; /* Asegura que no haya subrayado en el texto */
+    color: inherit; /* Mantiene el color del texto */
+    overflow: hidden; /* Asegura que el contenido adicional no sobresalga del contenedor */
+}
+
+
+
+.Enlace img {
+    width: 100%;
+    height: auto; /* Ajusta la altura automáticamente */
+    object-fit: cover;
+}
+
+.Enlace h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0 15px;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para el texto */
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute; /* Permite posicionar el texto sobre la imagen */
+    bottom: 10px; /* Posiciona el texto cerca de la parte inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Centra el texto horizontalmente */
+}
+
+.Enlace:hover {
+    background-color: #e6f0ff; /* Cambia a un fondo más claro al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+
+.news-section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white; /* Color de fondo suave para la sección de noticias */
+}
+
+.news-article {
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos de manera que el texto no se estire */
+    margin-bottom: 20px; /* Espacio entre artículos */
+    padding: 15px;
+    background-color: #ffffff; /* Fondo blanco para cada artículo */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil para profundidad */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.news-article img {
+    width: 300px; /* Tamaño fijo para todas las imágenes */
+    height: auto; /* Altura fija */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    object-fit: cover; /* Asegura que la imagen cubra completamente el espacio sin distorsionarse */
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+}
+
+.news-article div {
+    flex-grow: 1; /* Permite que el div del texto tome el espacio restante */
+}
+ 
+.news-article h3 {
+    margin-top: 0; /* Remueve margen superior para alinear el título con la imagen */
+    font-size: 18px; /* Tamaño de fuente para el título */
+    color: #333; /* Color oscuro para mejor lectura */
+}
+
+.news-article p {
+    font-size: 16px; /* Tamaño de fuente adecuado para el cuerpo del texto */
+    color: #666; /* Color más suave para el texto */
+    line-height: 1.5; /* Espaciado entre líneas para mejor lectura */
+    text-align: left; /*Alinea texto a la iqzuierda*/
+}
+
+.news-article a {
+    color: #1D1A5B; /* Color azul para los enlaces, similar a los enlaces de Google */
+    text-decoration: none; /* No subrayado */
+}
+
+.news-article a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón para mejorar la interactividad */
+}
+
+/* css de footer*/
+footer {
+    text-align: center;
+    background-color: #ff7a2d;
+    color: white;
+    padding: 10px 0;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #ff7a2d;
+    margin: 0;
+    list-style: none;
+}
+
+.main-nav ul li {
+    margin: 0 20px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.submit-button {
+    display: block;
+    margin: 20px auto;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 200px;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+/* css de integrantes */
+.Grupo {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.container_integrantes {
+    margin: 40px; /* Se ajusta independientemente del body */
+    padding: 20px; /* Padding externo adicional */
+    background: #fff;
+    border-radius: 8px;
+}
+
+.member {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.member img {
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+}
+
+form {
+    max-width: 700px;
+    width: 100%;
+    padding: 50px 30px;
+    background-color: white; /* Fondo blanco */
+    border: 0.3rem solid #ff7a2d; /* Borde naranja por defecto */
+    border-radius: 15px; /* Bordes circulares */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil para destacar el formulario */
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+form input, form select {
+    font-family: 'Overpass', sans-serif;
+    font-size: 110%;
+    color: #1b262c;
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ccc; /* Borde más sutil en los campos por defecto */
+    border-radius: 8px; /* Bordes redondeados para los inputs */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out; /* Transición suave para el borde */
+}
+
+form input:focus, form select:focus {
+    border-color: #ff7a2d; /* Borde naranja al hacer foco */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+}
+
+form input::placeholder {
+    color: #aaa; /* Placeholder en un tono gris claro */
+}
+
+.submit-button {
+    font-family: 'Overpass', sans-serif;
+    font-size: 110%;
+    color: white; 
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3d3d3d; /* Botón en gris oscuro */
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #5a5a5a; /* Color más claro al pasar el mouse */
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se coloquen uno debajo del otro */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: #c9d6ff;
+    background: transparent; /* Ayuda a que la imagen de fondo resalte */
+    margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+.form-content h2 {
+    font-size: 250%;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-content p {
+    text-align: center;
+    color: white; /* Cambia el color del texto si es necesario */
+    margin-bottom: 20px; /* Añade margen debajo del párrafo para separarlo del formulario */
+}
+
+
+/* css de calendario */
+.calendar-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.calendar-header button {
+    background-color: #3F485B;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar-table th, .calendar-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.calendar-table th {
+    background-color: #3F485B;
+    color: white;
+    font-weight: bold;
+}
+
+.calendar-table td {
+    height: 100px;
+    position: relative;
+}
+
+.calendar-table .appointment {
+    display: block;
+    background-color: #FA6C17;
+    color: white;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.calendar-table .appointment span {
+    display: block;
+}
+
+/* Cambia el color al pasar el mouse por encima de una celda */
+.calendar-table td:hover {
+    background-color: #e7e7e7;
+}
+
+/* CSS del carrusel */
+.carousel {
+    position: relative;
+    width: 80%;
+    margin: 20px auto; /* Ajusta el margen para separarlo de otros elementos */
+    overflow: hidden;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-button.left {
+    left: 10px;
+    background-color: #ff7a2d;
+    
+}
+
+.carousel-button.right {
+    right: 10px;
+    background-color: #ff7a2d;
+}
+
+.carousel-button:hover {
+    background-color: #774021;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 35.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 60%; /* Ancho del contenedor reducido al 60% */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    background: #000;
+    border-radius: 15px; /* Bordes redondeados del contenedor */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ajusta el ancho del iframe al 100% del contenedor */
+    height: 100%; /* Ajusta la altura del iframe al 100% del contenedor */
+    border: none; /* Elimina el borde predeterminado del iframe */
+    border-radius: 15px; /* Bordes redondeados del iframe */
+}
+
+/* Estilos básicos para la tabla */
+.info-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+}
+
+.info-table th, .info-table td {
+    border-bottom: 1px solid rgb(173, 172, 172);
+    padding: 15px;
+    text-align: left;
+}
+
+.info-table th {
+    background-color: #CCCCCC;
+}
+.info-table td {
+    color: black;
+}
+
+h1 {
+    text-align: center; /* Centra el texto */
+    font-size: 2em;     /* Ajusta el tamaño de la fuente según sea necesario */
+    margin: 20px 0;     /* Ajusta el margen superior e inferior según sea necesario */
+    color: black; 
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0px;
+    background-color: white;
+    width: 100vw;
+    height: 2000px; /* Ajusta la altura aquí */
+    margin: 0;
+}
+
+.hero-image {
+    width: 100%;
+    height: 500px; /* Ajusta la altura aquí */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.prueba {
+    width: 100%;
+    height: 5000px; /* Ajusta la altura aquí */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Hace que cubra toda la imagen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    width: 100%;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #ff7a2d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+
+.hero-content h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.hero-content p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.hero-button:hover {
+    background-color: #642c1b;
+}
+
+main {
+    padding-bottom: 150px;
+}
+
+hr {
+    border: none;
+    height: 2px; /* Grosor de la línea */
+    width: 75%; /* Largo de la línea (en este caso, el 50% del contenedor) */
+    background-color: black; /* Cambia el color de fondo según tu preferencia */
+    margin: 40px auto; /* Margen arriba y abajo, centrado horizontalmente */
+}
+
+/* Botón para volver atrás */
+.back-arrow {
+    display: inline-block;
+    margin: 20px 0;
+    text-decoration: none;
+    color: #fff; /* Texto en blanco */
+    font-size: 18px; /* Ajusta el tamaño del texto */
+    background-color: #ff7300; /* Color naranja */
+    padding: 10px 20px; /* Espaciado interno para que parezca un botón */
+    border: none; /* Elimina cualquier borde predeterminado */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-left: 50px; /* Ajusta este valor según tus necesidades */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Suaviza la transición al hacer hover */
+    text-align: center; /* Centra el contenido */
+}
+
+/* Hover para oscurecer el botón */
+.back-arrow:hover {
+    background-color: #e56700; /* Oscurece ligeramente el naranja */
+    text-decoration: none; /* Evita subrayado al pasar el ratón */
+}
+
+.Agregar {
+    position: absolute;
+    right: 200px; /* Ajusta según sea necesario */
+    top: 175px; /* Ajusta según sea necesario */
+    padding: 10px 20px;
+    background-color: #CCCCCC; /* Color de fondo del botón */
+    color: black; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 20px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.Agregar:hover {
+    background-color: #879AB5; /* Color de fondo al pasar el cursor por encima */
+}
+
+.login-button-container {
+    position: absolute;
+    top: 1.5rem;
+    right: 11rem;
+    margin: auto;
+}
+
+.login-button {
+    padding: 10px 20px;
+    color: white; /* Color del texto */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.fondo-agendarcita {
+    background-image: url('../images/calendario.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* La imagen cubre toda la ventana */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100%; /* Ocupa toda la altura de la ventana */
+    width: 100.8%; /* Asegura que la imagen cubra todo el ancho de la ventana */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina rellenos */
+}
+
+.fondo-registroauto {
+    background-image: url('../images/registroautos.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* La imagen cubre toda la ventana */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100%; /* Ocupa toda la altura de la ventana */
+    width: 100.8%; /* Asegura que la imagen cubra todo el ancho de la ventana */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina rellenos */
+}
+
+.fondo-registromecanico {
+    background-image: url('../images/tec-mecanica-header-1440x600.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* La imagen cubre toda la ventana */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100%; /* Ocupa toda la altura de la ventana */
+    width: 100.8%; /* Asegura que la imagen cubra todo el ancho de la ventana */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina rellenos */
+}
+
+/*css de las tablas de detalle_cliente*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Encabezado de las tablas */
+table thead {
+    background-color: #3d3d3d;
+    color:white;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+/* Alternar colores de filas */
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover sobre filas */
+table tbody tr:hover {
+    background-color: #eaeaea;
+}
+
+/* Contenedor de la tabla */
+.table-container {
+    overflow-x: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+/* Botón de acciones */
+table .btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+table .btn:hover {
+    background-color: #45a049;
+}
+
+.detalle-container h2 {
+    font-size: 250%;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.detalle-container {
+    background-image: url('../images/verclientes.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* La imagen cubre toda la ventana */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100%; /* Ocupa toda la altura de la ventana */
+    width: 100%; /* Asegura que la imagen cubra todo el ancho de la ventana */
+}
+
+.detalle-facturacion {
+    background-image: url('../images/facturacion1.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* La imagen cubre toda la ventana */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100%; /* Ocupa toda la altura de la ventana */
+    width: 100%; /* Asegura que la imagen cubra todo el ancho de la ventana */
+}
+
+.detalle-facturacion h2 {
+    font-size: 250%;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.detalle-facturacion h1 {
+    font-size: 250%;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.main-detallecliente {
+    padding-bottom: 500px;
+}
+
+.main-facturacion {
+    padding-bottom: 600px;
+}
+
+.detalle-mecanico {
+    background-image: url('../images/vermecanico.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* La imagen cubre toda la ventana */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100%; /* Ocupa toda la altura de la ventana */
+    width: 100%; /* Asegura que la imagen cubra todo el ancho de la ventana */
+}
+
+.detalle-mecanico h1 {
+    font-size: 250%;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.fondo-vercliente{
+	background-image: url('../images/verclientes.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* La imagen cubre toda la ventana */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100%; /* Ocupa toda la altura de la ventana */
+    width: 100%; /* Asegura que la imagen cubra todo el ancho de la ventana */
+}
+
+
+.info-cliente {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.info-grid {
+    display: flex;
+    gap: 10px; /* Espacio entre los cuadros */
+    justify-content: center; /* Centra los cuadros en el contenedor */
+}
+
+.info-card {
+    flex: 1 1 calc(30% - 10px); /* Cada cuadro ocupa el 30% del ancho del contenedor, menos el espacio del gap */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s; /* Efecto suave al pasar el mouse */
+}
+
+.info-card:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.info-card strong {
+    display: block; /* Hace que el texto fuerte ocupe toda una línea */
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.info-empty {
+    color: #666;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Contenedor de la sección */
+.info-tablaclient {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Grid para organizar las tarjetas */
+.auto-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Espaciado entre tarjetas */
+    justify-content: center;
+}
+
+/* Estilo para cada tarjeta */
+.auto-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: calc(25% - 15px); /* Las tarjetas ocupan el 25% del contenedor menos el espacio del gap */
+    min-width: 200px; /* Ancho mínimo para pantallas pequeñas */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Títulos y texto en las tarjetas */
+.auto-card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+}
+
+.auto-card p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.auto-card strong {
+    color: #000;
+}
+
+/* Efecto hover en las tarjetas */
+.auto-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mensaje cuando no hay datos */
+.info-tablaclient p {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+/* Contenedor de los botones */
+.info-buttoncliente {
+    text-align: center; /* Centra los botones */
+    margin: 20px 0;
+}
+
+/* Estilo base para los botones */
+.btn {
+    display: inline-block; /* Hace que el botón se comporte como un elemento inline */
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+    font-weight: bold;
+    color: #fff; /* Color del texto */
+    background-color: #007bff; /* Color del fondo */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones para el hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+.btn-resgitroauto{
+    display: inline-block; /* Hace que el botón se comporte como un elemento inline */
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+    font-weight: bold;
+    color: #fff; /* Color del texto */
+    background-color: #007bff; /* Color del fondo */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones para el hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+	margin-top: 1rem;
+	margin-right: 35rem;
+}
+
+.btn-resgitroauto:hover{
+    background-color: #079cff; /* Cambia a un tono aún más oscuro en clic */
+    transform: scale(1.05); /* Restaura el tamaño al presionar */
+}
+
+.btn-resgitroauto:active{
+    background-color: #1f78ff; /* Cambia a un tono aún más oscuro en clic */
+    transform: scale(1); /* Restaura el tamaño al presionar */
+}
+
+
+/* Botón al pasar el ratón */
+.btn:hover {
+    background-color: #0056b3; /* Color más oscuro en hover */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más marcada */
+}
+
+/* Botón secundario */
+.btn-secondary {
+    background-color: #6c757d; /* Color de fondo secundario */
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268; /* Color más oscuro en hover */
+}
+
+/* Asegura que los botones sean accesibles en dispositivos pequeños */
+.btn {
+    width: auto; 
+}
+
+.submit-button {
+    display: block;
+    margin: 20px auto;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 200px;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #45a049; /* Cambia a un tono más oscuro en hover */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+.submit-button:active {
+    background-color: #388E3C; /* Cambia a un tono aún más oscuro en clic */
+    transform: scale(1); /* Restaura el tamaño al presionar */
+}
+
+.boton-facturas{
+    text-align: center;
+}
+

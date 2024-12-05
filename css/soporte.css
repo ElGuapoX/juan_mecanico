@@ -1,0 +1,124 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle, 
+        #e0e0e0, /* Gris claro */
+        #c0c0c0, /* Gris medio claro */
+        #a0a0a0, /* Gris medio */
+        #808080, /* Gris oscuro */
+        #606060  /* Gris muy oscuro */
+    );
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+a{
+    text-decoration: none
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    background-color: #3d3d3d; /* Fondo del header */
+    padding: 0 20px; /* Padding en los lados del header */
+    height: 70px; /* Establece una altura fija para el header */
+}
+
+.header-content {
+    display: flex;
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+.header-content img.logo {
+    max-height: 350px; /* Establece la altura máxima del logo */
+    width: 350px; /* Mantiene la proporción del logo */
+    margin-right: 20px; /* Espacio entre el logo y el siguiente elemento */
+}
+
+.header-content .contact-info {
+    color: white;
+    margin-right: 20px; /* Espacio entre el texto de contacto y el siguiente elemento */
+}
+
+.header-content .hours {
+    color: white;
+    margin-right: 20px; /* Espacio entre el horario y el siguiente elemento */
+}
+
+/*Css para los integrantes */
+.integrantes {
+    text-align: center;
+    margin-top: 15rem;
+}
+
+.integrantes-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    gap: 30px; /* Espacio entre recuadros */
+}
+
+.integrantes-list li {
+    background-color: #f0f0f0; /* Fondo del recuadro */
+    border: 2px solid #ccc; /* Borde del recuadro */
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px; /* Ancho del recuadro */
+    height: 350px; /* Alto del recuadro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efecto de profundidad */
+    transition: transform 0.3s ease; /* Efecto de hover */
+}
+
+.integrantes-list li:hover {
+    transform: scale(1.05); /* Aumenta ligeramente al pasar el mouse */
+}
+
+.integrantes-list img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.integrantes-list h2 {
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: #333;
+}
+
+.integrantes-list p {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+}
+
+.boton-volver {
+    padding: 15px;
+    background-color: #ff7300;
+    color: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 100px; /* Distancia desde la parte superior */
+    left: 50px; /* Distancia desde la derecha */
+}
+.boton-volver:hover{
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+

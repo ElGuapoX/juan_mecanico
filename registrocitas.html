@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Citas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="home" class="fondo-agendarcita">
+    <header>
+        <div class="header-content">
+            <a href="home.php"><img src="images/con_fondo-removebg-preview (1).png" alt="Logo Juan Mecanico" class="logo"></a>
+            <div class="contact-info">Contáctanos: 1234-5678 / 5678-1234</div>
+            <div class="hours">Horario de atención: lunes a sábado de 8:00 am a 6:00 pm</div>
+        </div>
+    </header>
+    <a href="javascript:history.back()" class="back-arrow">Volver</a>
+
+    <main>
+        <section class="form-content">
+            <h2>Registro de Citas</h2>
+            <p>Seleccione la fecha y hora para su cita:</p>
+            <form action="php/registrocita.php" method="post" name="formulario">
+                <label>Fecha de la cita:</label> <input type="date" name="fecha" required><br>
+                <label>Hora de la cita:</label> <input type="time" name="hora" required><br>
+                <label>Servicio:</label>
+                <select name="servicio">
+                    <option value="Seleccione">Seleccione una opción</option>
+                    <option value="1">Diagnostico General</option>
+                    <option value="2">Mantenimiento</option>
+                    <option value="3">Chapisteria y Pintura</option>
+                    <option value="4">Alineacion</option>
+                </select>
+                
+                <input type="submit" name="botonguardar" value="Registrar Cita" class="submit-button">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="home.php">Inicio</a></li>
+                <li><a href="soporte.html">Soporte</a></li>
+                <li><a href="logout.php">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+        <p>Todos los derechos reservados © Universidad Tecnológica de Panamá 2024</p>
+    </footer>
+</body>
+</html>

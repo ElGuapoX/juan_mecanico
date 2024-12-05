@@ -1,0 +1,173 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #D9D9D9;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    background-color: #2E2E2E; /* Fondo del header */
+    padding: 0 20px; /* Padding en los lados del header */
+    height: 70px; /* Establece una altura fija para el header */
+}
+
+.header-content {
+    display: flex;
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+.header-content img.logo {
+    max-height: 350px; /* Establece la altura máxima del logo */
+    width: 350px; /* Mantiene la proporción del logo */
+    margin-right: 20px; /* Espacio entre el logo y el siguiente elemento */
+}
+
+.header-content .contact-info {
+    color: white;
+    margin-right: 20px; /* Espacio entre el texto de contacto y el siguiente elemento */
+}
+
+.header-content .hours {
+    color: white;
+    margin-right: 20px; /* Espacio entre el horario y el siguiente elemento */
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #757575;
+    color: white;
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espacio entre el ícono y el texto */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1001;
+}
+
+.dropbtn:hover {
+    background-color: #757575;
+    transform: scale(1.05); /* Ligero aumento al pasar el mouse */
+}
+
+/* The container <div> */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    right: 0; /* Alineado al lado derecho */
+    z-index: 1;
+    padding: 0.5rem 0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    display: block;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #757575;
+    color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.seccion-servicio h2{
+    text-align: center;
+}
+.servicios {
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos de manera que el texto no se estire */
+    margin-bottom: 20px; /* Espacio entre artículos */
+    padding: 15px;
+    background-color: #ffffff; /* Fondo blanco para cada artículo */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil para profundidad */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.servicios img {
+    width: 300px; /* Tamaño fijo para todas las imágenes */
+    height: auto; /* Altura fija */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    object-fit: cover; /* Asegura que la imagen cubra completamente el espacio sin distorsionarse */
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+}
+
+.servicios div {
+    flex-grow: 1; /* Permite que el div del texto tome el espacio restante */
+}
+ 
+.servicios h3 {
+    margin-top: 0; /* Remueve margen superior para alinear el título con la imagen */
+    font-size: 18px; /* Tamaño de fuente para el título */
+    color: #333; /* Color oscuro para mejor lectura */
+}
+
+.servicios p {
+    font-size: 16px; /* Tamaño de fuente adecuado para el cuerpo del texto */
+    color: #666; /* Color más suave para el texto */
+    line-height: 1.5; /* Espaciado entre líneas para mejor lectura */
+    text-align: left; /*Alinea texto a la iqzuierda*/
+}
+
+.servicios a {
+    color: #1D1A5B; /* Color azul para los enlaces, similar a los enlaces de Google */
+    text-decoration: none; /* No subrayado */
+}
+
+.servicios a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón para mejorar la interactividad */
+}
+
+
+/* css de footer*/
+footer {
+    text-align: center;
+    background-color: #2E2E2E;
+    color: white;
+    padding: 10px 0;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #2E2E2E;
+    margin: 0;
+    list-style: none;
+}
+
+.main-nav ul li {
+    margin: 0 20px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
