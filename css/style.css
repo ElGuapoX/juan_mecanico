@@ -10,92 +10,40 @@ a{
     text-decoration: none
 }
 
-/*Header*/
 header {
     display: flex;
-    align-items: center;
-    justify-content: space-between; /* Distribuye el espacio entre los elementos */
-    background-color: #2E2E2E; /* Fondo del header */
-    padding: 0 20px; /* Padding en los lados del header */
-    height: 70px; /* Establece una altura fija para el header */
-}
-
-.header-content {
-    display: flex;
+    justify-content: space-between;
     align-items: center; /* Centra los elementos verticalmente */
+    background-color: #2E2E2E;
+    padding: 0 20px;
+    height: 70px;
 }
 
-.header-content img.logo {
-    max-height: 350px; /* Establece la altura máxima del logo */
-    width: 350px; /* Mantiene la proporción del logo */
-    margin-right: 20px; /* Espacio entre el logo y el siguiente elemento */
-}
-
-.header-content .contact-info {
-    color: white;
-    margin-right: 20px; /* Espacio entre el texto de contacto y el siguiente elemento */
-}
-
-.header-content .hours {
-    color: white;
-    margin-right: 20px; /* Espacio entre el horario y el siguiente elemento */
-}
-
-/* Dropdown Boton */
-.dropbtn {
-    background-color: #757575;
-    color: white;
-    padding: 1rem 1.5rem;
-    font-size: 1.25rem;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem; /* Espacio entre el ícono y el texto */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    z-index: 1001;
-}
-
-.dropbtn:hover {
-    background-color: #757575;
-    transform: scale(1.05); /* Ligero aumento al pasar el mouse */
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 200px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 0.5rem;
-    overflow: hidden;
-    right: 0; /* Alineado al lado derecho */
-    z-index: 1;
-    padding: 0.5rem 0;
-}
-
-.dropdown-content a {
-    color: #333;
-    padding: 0.75rem 1.5rem;
+header a {
     text-decoration: none;
-    display: block;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.dropdown-content a:hover {
-    background-color: #757575;
+.logo {
+    max-height: 80px; /* Ajusta el tamaño del logo */
+    width: auto; /* Mantiene la proporción del logo */
+}
+
+.opciones {
+    display: flex;
+    justify-content: center; /* Centra las opciones */
+    flex-grow: 1; /* Ocupa todo el espacio disponible entre el logo y el borde derecho */
+    margin: 0 auto; /* Centra el contenedor de las opciones */
+}
+
+.opciones a {
+    margin: 0 20px;
     color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.opciones a:hover {
+    color: #ffcc00;
 }
 
 .seccion-servicio h2{

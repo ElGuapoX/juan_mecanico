@@ -18,19 +18,15 @@ if (!isset($_SESSION['usuario_id'])) {
 </head>
 <body id="home">
 <header>
-    <div class="header-content">
-        <a href="home.php"><img src="images/con_fondo-removebg-preview (1).png" alt="Logo Juan Mecanico" class="logo"></a>
-        <div class="contact-info">Contactanos: 1234-5678 / 5678-1234</div>
-        <div class="hours">Horario de atención: lunes a sábado de 8:00 am a 6:00 pm</div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">&#9776; Opciones</button>
-        <div class="dropdown-content">
-            <a href="home.php">Inicio</a>
-            <a href="registrocitas.html">Registro de Citas</a>
-            <a href="soporte.html">Soporte</a>
-            <a href="logout.php">Cerrar sesión</a>
-        </div>
+    <a href="home.php">
+        <img src="../../images/logo.jpg" alt="Logo Juan Mecanico" class="logo">
+    </a>
+
+    <div class="opciones">
+        <a href="home.php">Inicio</a>
+        <a href="registrocitas.html">Registro de Citas</a>
+        <a href="soporte.html">Soporte</a>
+        <a href="logout.php">Cerrar sesión</a>
     </div>
 </header>
 
