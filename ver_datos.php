@@ -1,5 +1,4 @@
 <?php
-include 'php/aud_errores.php';
 /*conexión api: http://localhost/juan_mecanico/ver_datos?tabla=mecanico
 */
 
