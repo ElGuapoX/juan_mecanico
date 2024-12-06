@@ -134,13 +134,19 @@ nav{
     text-align: left; /*Alinea texto a la iqzuierda*/
 }
 
-header .publicidad {
+.publicidad {
     background-image: url('../images/fondomecanico.jpg'); /* Ajusta la ruta */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 30rem; /* Ajusta la altura */
+    height: 40rem; /* Ajusta la altura */
     width: 100%;
+}
+
+.publicidad h1 {
+    color: white;
+    text-align: center;
+
 }
 
 
