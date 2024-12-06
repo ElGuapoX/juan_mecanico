@@ -60,23 +60,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Citas</title>
+    <title>Juan Mecanico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
     <link rel="stylesheet" href="../../css/style.css">
 </head>
-<body id="home" class="fondo-agendarcita">
-    <header>
-        <div class="header-content">
-            <a href="../../views/cliente/home.php">
-                <img src="../../images/con_fondo-removebg-preview (1).png" alt="Logo Juan Mecánico" class="logo">
-            </a>
-            <div class="contact-info">Contáctanos: 1234-5678 / 5678-1234</div>
-            <div class="hours">Horario de atención: lunes a sábado de 8:00 am a 6:00 pm</div>
-        </div>
-    </header>
-    <a href="javascript:history.back()" class="back-arrow">Volver</a>
+<body id="home">
+<nav>
+    <div class="nav-logo">
+        <a href="home.php">
+            <img src="../../images/logo.png">
+        </a>
+    </div>
+    <ul class="nav-links">
+        <li class="link"><a href="home.html">Home</a></li>
+        <li id="link1" class="link"><a href="#">Features</a></li>
+        <li id="link2" class="link"><a href="servicios.html">Servicios</a></li>
+        <li id="link3" class="link"><a href="#">Informacion</a></li>
+    </ul>
+    <a href="registrocita.php" class="btn">Obten una cita</a>
+</nav>
+<header>
+    
 
-    <main>
-        <section class="form-content">
+</header>
+
+
+<main>
+    <section class="form-content">
             <h2>Registro de Citas</h2>
             <p>Seleccione la fecha y hora para su cita:</p>
             <form action="" method="post">
@@ -98,17 +108,46 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="submit" value="Registrar Cita" class="submit-button">
             </form>
         </section>
-    </main>
 
-    <footer>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="../../views/cliente/home.php">Inicio</a></li>
-                <li><a href="../../views/cliente/soporte.html">Soporte</a></li>
-                <li><a href="../../php/logout.php">Cerrar sesión</a></li>
-            </ul>
-        </nav>
-        <p>Todos los derechos reservados © Universidad Tecnológica de Panamá 2024</p>
+</main>
+
+<footer class="container">
+        <span class="blur"></span>
+        <span class="blur"></span>
+        <div class="column">
+            <div class="logo">
+                <img src="../../images/logo.png">
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <div class="socials">
+                <a href="#"><i class="ri-youtube-line"></i></a>
+                <a href="#"><i class="ri-instagram-line"></i></a>
+                <a href="#"><i class="ri-twitter-line"></i></a>
+            </div>
+        </div>
+        <div class="column">
+            <h4>Company</h4>
+            <a href="#">Business</a>
+            <a href="#">Partnership</a>
+            <a href="#">Network</a>
+        </div>
+        <div class="column">
+            <h4>About Us</h4>
+            <a href="#">Blogs</a>
+            <a href="#">Channels</a>
+            <a href="#">Sponsors</a>
+        </div>
+        <div class="column">
+            <h4>Contact</h4>
+            <a href="#">Contact Us</a>
+            <a href="#">Privicy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
     </footer>
+
+
+
 </body>
 </html>
