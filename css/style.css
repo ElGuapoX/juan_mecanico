@@ -202,6 +202,217 @@ nav{
     text-align: center;
 }
 
+.nosotros { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    margin: 50px auto; /* Centra horizontalmente con auto en los márgenes */
+    background-color: white;
+    width: 70rem;
+    padding: 20px; /* Añade algo de relleno interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: para dar un efecto visual */
+}
+
+.nosotros-t{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.nosotros img{
+    width: 250px;
+    height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Leer y aprender esta seccion*/
+
+
+  .testimonial-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 50px 0;
+  }
+  
+  .testimonial-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .text-content {
+    flex: 1;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .text-content h2 {
+    font-size: 2rem;
+    color: #072f59;
+    margin-bottom: 10px;
+  }
+  
+  .text-content .highlight-line {
+    width: 80px;
+    height: 5px;
+    background-color: #ff7c00;
+    margin: 0 auto 20px;
+  }
+  
+  .text-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    margin-top: 20px;
+  }
+  
+  .nav-btn {
+    background-color: #ff7c00;
+    color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  .client-info {
+    text-align: center;
+  }
+  
+  .client-img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+  }
+  
+  .client-name {
+    font-weight: bold;
+    color: black;
+    margin: auto;
+  }
+  
+  .client-location {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  .dots {
+    margin-top: 20px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #ff7c00;
+  }
+  
+  .image-content {
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .testimonial-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .testimonial-box {
+    position: relative;
+    height: 150px; /* Ajusta según la altura de los testimonios */
+    overflow: hidden;
+  }
+  
+  .testimonial-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .testimonial-item.active {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 1;
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*css para footer*/
 footer{
     position: relative;
