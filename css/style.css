@@ -209,6 +209,8 @@ nav{
     gap: 1rem;
     text-align: center;
     margin: 50px auto; /* Centra horizontalmente con auto en los márgenes */
+    margin-top: 150px;
+    margin-bottom: 150px;
     background-color: white;
     width: 70rem;
     padding: 20px; /* Añade algo de relleno interno */
@@ -228,63 +230,54 @@ nav{
 
 
 
+/*Seccion de comentarios de Clientes*/
 
 
-
-
-
-
-
-
-/*Leer y aprender esta seccion*/
-
-
-  .testimonial-section {
+  .seccion-reviews {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f9f9f9;
     padding: 50px 0;
   }
   
-  .testimonial-content {
+  .contenido-reviews {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    max-width: 1200px;
+    max-width: 1500px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
   }
   
-  .text-content {
+  .texto-reviews {
     flex: 1;
     padding: 30px;
     text-align: center;
   }
   
-  .text-content h2 {
+  .texto-reviews h2 {
     font-size: 2rem;
     color: #072f59;
     margin-bottom: 10px;
   }
   
-  .text-content .highlight-line {
+  .texto-reviews .linea {
     width: 80px;
     height: 5px;
     background-color: #ff7c00;
     margin: 0 auto 20px;
   }
   
-  .text-content p {
+  .texto-reviews p {
     font-size: 1rem;
     color: #555;
     margin-bottom: 20px;
   }
   
-  .navigation {
+  .navegacion {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -296,39 +289,39 @@ nav{
     background-color: #ff7c00;
     color: white;
     border: none;
-    padding: 20px;
-    border-radius: 50%;
+    padding: 15px;
+    border-radius: 40%;
     cursor: pointer;
     font-size: 1.2rem;
   }
   
-  .client-info {
+  .info-cliente {
     text-align: center;
   }
   
-  .client-img {
+  .img-cliente {
     border-radius: 50%;
     width: 60px;
     height: 60px;
     object-fit: cover;
   }
   
-  .client-name {
+  .nombre-cliente {
     font-weight: bold;
     color: black;
     margin: auto;
   }
   
-  .client-location {
-    font-size: 0.9rem;
-    color: #888;
+  .ubicacion-cliente {
+    font-size: 0.9 rem;
+    color: black;
   }
   
-  .dots {
+  .puntos {
     margin-top: 20px;
   }
   
-  .dot {
+  .punto {
     width: 10px;
     height: 10px;
     margin: 0 5px;
@@ -338,7 +331,7 @@ nav{
     cursor: pointer;
   }
   
-  .dot.active {
+  .punto.active {
     background-color: #ff7c00;
   }
   
@@ -352,7 +345,7 @@ nav{
     height: auto;
     object-fit: cover;
   }
-  .testimonial-box {
+  .caja-reviews {
     position: relative;
     height: 150px; /* Ajusta según la altura de los testimonios */
     overflow: hidden;
@@ -375,43 +368,6 @@ nav{
   }
   
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*css para footer*/
 footer{

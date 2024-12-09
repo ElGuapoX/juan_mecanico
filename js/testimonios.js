@@ -1,35 +1,47 @@
-const testimonials = document.querySelectorAll('.testimonial-item');
-const dots = document.querySelectorAll('.dot');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", () => {
+    const testimonialItems = document.querySelectorAll(".testimonial-item");
+    const puntos = document.querySelectorAll(".punto");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+    let activeIndex = 0;
 
-// Función para mostrar el testimonio actual
-function showTestimonial(index) {
-  testimonials.forEach((item, i) => {
-    item.classList.toggle('active', i === index);
-    dots[i].classList.toggle('active', i === index);
-  });
-}
+    // Función para actualizar el slider
+    const updateSlider = () => {
+        // Actualizar testimonios
+        testimonialItems.forEach((item, index) => {
+            item.classList.toggle("active", index === activeIndex);
+        });
 
-// Event listeners para los botones
-prevButton.addEventListener('click', () => {
-  currentIndex = (currentIndex === 0) ? testimonials.length - 1 : currentIndex - 1;
-  showTestimonial(currentIndex);
+        // Actualizar puntos
+        puntos.forEach((punto, index) => {
+            punto.classList.toggle("active", index === activeIndex);
+        });
+    };
+
+    // Mover al siguiente testimonio
+    const nextTestimonial = () => {
+        activeIndex = (activeIndex + 1) % testimonialItems.length;
+        updateSlider();
+    };
+
+    // Mover al testimonio anterior
+    const prevTestimonial = () => {
+        activeIndex = (activeIndex - 1 + testimonialItems.length) % testimonialItems.length;
+        updateSlider();
+    };
+
+    // Agregar eventos a los botones
+    nextBtn.addEventListener("click", nextTestimonial);
+    prevBtn.addEventListener("click", prevTestimonial);
+
+    // Agregar eventos a los puntos
+    puntos.forEach((punto, index) => {
+        punto.addEventListener("click", () => {
+            activeIndex = index;
+            updateSlider();
+        });
+    });
+
+    // Inicializar slider
+    updateSlider();
 });
-
-nextButton.addEventListener('click', () => {
-  currentIndex = (currentIndex === testimonials.length - 1) ? 0 : currentIndex + 1;
-  showTestimonial(currentIndex);
-});
-
-// Event listeners para los puntos (dots)
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    currentIndex = index;
-    showTestimonial(currentIndex);
-  });
-});
-
-// Inicializa mostrando el primer testimonio
-showTestimonial(currentIndex);
