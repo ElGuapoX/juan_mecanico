@@ -1,13 +1,3 @@
-<?php
-session_start();
-
-// Verificar si el usuario ha iniciado sesión
-if (!isset($_SESSION['usuario_id'])) {
-    header("Location: login.html");
-    exit();
-}
-
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,6 +6,7 @@ if (!isset($_SESSION['usuario_id'])) {
     <title>Juan Mecanico</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/cliente/servicios.css">
 </head>
 <body id="home">
 <nav>
@@ -26,7 +17,7 @@ if (!isset($_SESSION['usuario_id'])) {
     </div>
     <ul class="nav-links">
         <li class="link"><a href="home.html">Home</a></li>
-        <li id="link1" class="link"><a href="#">Features</a></li>
+        <li id="link1" class="link"><a href="nosotros.html">Nosotros</a></li>
         <li id="link2" class="link"><a href="servicios.html">Servicios</a></li>
         <li id="link3" class="link"><a href="#">Informacion</a></li>
     </ul>
@@ -43,8 +34,9 @@ if (!isset($_SESSION['usuario_id'])) {
 
     <section class="seccion-servicio">
         <h2>Servicios</h2>
+        <p id="descripcion-servicio">En esta sección podrás visualizar todos los servicios con los que cuenta nuestro taller</p>
         <article class="servicios">
-            <img src="images/Diagnostico.png" alt="Noticia 1">
+            <img src="../../images/Diagnostico.png" alt="Noticia 1">
             <div>
                 <h3>Diagnostico</h3>
                 <p>En Juan Mecánico contamos con un equipo de tecnología de punta donde tenemos la posibilidad de diagnosticar tu carro:</p><br>
@@ -58,7 +50,7 @@ if (!isset($_SESSION['usuario_id'])) {
             </div>
         </article>
         <article class="servicios">
-            <img src="images/Mantenimiento y reparaciones.png" alt="Noticia 2">
+            <img src="../../images/Mantenimiento y reparaciones.png" alt="Noticia 2">
             <div>
                 <h3>Mantenimiento y Reparaciones</h3>
                 <p>En Juan Mecánico ofrecemos una amplia variedad de servicios preventivos, mantenimientos y reparaciones correctivas que su auto requiera:</p><br>
@@ -72,7 +64,7 @@ if (!isset($_SESSION['usuario_id'])) {
             </div>
         </article>
         <article class="servicios">
-            <img src="images/Chapisteria y Pintura.png" alt="Noticia 2">
+            <img src="../../images/Chapisteria y Pintura.png" alt="Noticia 2">
             <div>
                 <h3>Chapisteria y Pintura</h3>
                 <p>Los mejores profesionales de al pintura y chapisteria automotriz a su disposicion</p><br>

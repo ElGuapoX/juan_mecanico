@@ -1,0 +1,48 @@
+.seccion-servicio{ 
+    padding: 1rem 5rem;
+}
+
+.seccion-servicio h2{
+    text-align: center;
+    color: white;
+    padding: 5rem 0rem;
+}
+
+#descripcion-servicio{
+    text-align: center;
+    color: white;
+    margin-bottom: 5rem;
+}
+
+.servicios {
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos de manera que el texto no se estire */
+    margin-bottom: 20px; /* Espacio entre artículos */
+    padding: 2rem;
+    background-color: black; /* Fondo blanco para cada artículo */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil para profundidad */
+    border-radius: 50px; /* Bordes redondeados */
+}
+
+.servicios img {
+    width: 300px; /* Tamaño fijo para todas las imágenes */
+    height: auto; /* Altura fija */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    object-fit: cover; /* Asegura que la imagen cubra completamente el espacio sin distorsionarse */
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+    margin-right: 3rem;
+
+}
+ 
+.servicios h3 {
+    margin-top: 0; /* Remueve margen superior para alinear el título con la imagen */
+    font-size: 18px; /* Tamaño de fuente para el título */
+    color: white; /* Color oscuro para mejor lectura */
+}
+
+.servicios p, li {
+    font-size: 16px; /* Tamaño de fuente adecuado para el cuerpo del texto */
+    color: white; /* Color más suave para el texto */
+    line-height: 1.5; /* Espaciado entre líneas para mejor lectura */
+    text-align: left; /*Alinea texto a la iqzuierda*/
+}
