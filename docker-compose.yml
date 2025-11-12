@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    container_name: juan_mecanico_web
+    ports:
+      - "8080:80"                # Accedes desde http://localhost:8080
+    volumes:
+      - ./src:/var/www/html      # Sincroniza tu código local (verás cambios al instante)
+    restart: always
