@@ -1,5 +1,5 @@
 <?php
-include_once 'db.php';
+include_once 'bd/bd.php';
 
 // Configurar un manejador global para capturar errores y excepciones
 function registrarError($descripcion) {

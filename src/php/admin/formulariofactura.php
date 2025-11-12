@@ -75,7 +75,7 @@ $servicios_disponibles = $result_servicios->fetch_all(MYSQLI_ASSOC);
 <body class="fondo-registroauto">
 <header>
     <div class="header-content">
-        <a href="../admin.php"><img src="../images/con_fondo-removebg-preview (1).png" alt="Logo Juan Mecanico" class="logo"></a>
+    <a href="admin.php"><img src="../../images/con_fondo-removebg-preview (1).png" alt="Logo Juan Mecanico" class="logo"></a>
         <div class="contact-info">Contactanos: 1234-5678 / 5678-1234</div>
         <div class="hours">Horario de atención: lunes a sábado de 8:00 am a 6:00 pm</div>
     </div>

@@ -10,7 +10,8 @@ por ejemplo: http://localhost/juan_mecanico/ver_datos?tabla=cliente */
 
 // Incluir configuración y conexión a la base de datos
 include_once 'config.php';
-include_once 'php/db.php';
+// usar la conexión centralizada
+include_once 'bd/bd.php';
 
 // Verificar si se pasa el nombre de la tabla como parámetro GET
 if (isset($_GET['tabla']) && !empty($_GET['tabla'])) {
@@ -20,14 +21,28 @@ if (isset($_GET['tabla']) && !empty($_GET['tabla'])) {
     $db = new Database();
     $conn = $db->connect();
 
-    // Validar si la tabla existe en la base de datos
-    $sql_verificar = "SHOW TABLES LIKE '$tabla'";
-    $result_verificar = $conn->query($sql_verificar);
+    // Validar que el nombre de tabla tenga solo caracteres permitidos
+    if (!preg_match('/^[A-Za-z0-9_]+$/', $tabla)) {
+        echo json_encode([
+            "status" => "error",
+            "message" => "Nombre de tabla inválido"
+        ]);
+        exit;
+    }
 
-    if ($result_verificar->num_rows > 0) {
+    // Validar si la tabla existe en la base de datos usando consulta preparada
+    $stmt_verificar = $conn->prepare("SHOW TABLES LIKE ?");
+    $likePattern = $tabla;
+    $stmt_verificar->bind_param('s', $likePattern);
+    $stmt_verificar->execute();
+    $result_verificar = $stmt_verificar->get_result();
+
+    if ($result_verificar && $result_verificar->num_rows > 0) {
         // Si la tabla existe, obtener los datos
         try {
-            $sql = "SELECT * FROM " . $tabla;
+            // Nota: los identificadores de tabla no se pueden parametrizar.
+            // Ya validamos que el nombre contiene solo caracteres seguros y existe.
+            $sql = "SELECT * FROM `" . $tabla . "`";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {

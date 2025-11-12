@@ -1,11 +1,11 @@
 <?php
 session_start();
-include_once 'db.php';
-include '../php/aud_errores.php';
+include_once '../../bd/bd.php';
+include_once '../../aud_errores.php';
 
 // Verificar si el usuario ha iniciado sesión
 if (!isset($_SESSION['usuario_id'])) {
-    header("Location: ../login.html");
+    header("Location: ../../index.html");
     exit();
 }
 
@@ -23,15 +23,10 @@ $query_facturas = "
     LEFT JOIN SERVICIO s ON fs.ID_SERVICIO = s.ID_SERVICIO
     WHERE f.ID_CLIENTE = ?
 ";
-$stmt_facturas = $conn->prepare($query_facturas);
-$stmt_facturas->bind_param('i', $id_cliente);
-$stmt_facturas->execute();
-$result_facturas = $stmt_facturas->get_result();
-if ($result_todos_clientes->num_rows > 0) {
-    while ($row = $result_todos_clientes->fetch_assoc()) {
-        $todos_clientes[] = $row;
-    }
-}
+    $stmt_facturas = $conn->prepare($query_facturas);
+    $stmt_facturas->bind_param('i', $id_cliente);
+    $stmt_facturas->execute();
+    $result_facturas = $stmt_facturas->get_result();
 $conn->close();
 ?>
 
@@ -41,26 +36,26 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facturas del Cliente</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body id="home" class="detalle-facturacion">
 <header>
     <div class="header-content">
-        <a href="../home.php"><img src="../images/con_fondo-removebg-preview (1).png" alt="Logo Juan Mecanico" class="logo"></a>
+            <a href="home.html"><img src="../images/con_fondo-removebg-preview (1).png" alt="Logo Juan Mecanico" class="logo"></a>
         <div class="contact-info">Contáctanos: 1234-5678 / 5678-1234</div>
         <div class="hours">Horario de atención: lunes a sábado de 8:00 am a 6:00 pm</div>
     </div>
     <div class="dropdown">
         <button class="dropbtn">&#9776; Opciones</button>
         <div class="dropdown-content">
-            <a href="../home.php">Inicio</a>
+            <a href="home.html">Inicio</a>
             <a href="../registrocitas.html">Registro de Citas</a>
             <a href="../soporte.html">Soporte</a>
-            <a href="../logout.php">Cerrar sesión</a>
+            <a href="../../logout.php">Cerrar sesión</a>
         </div>
     </div>
 </header>
-<a href="../home.php" class="back-arrow">Volver</a>
+    <a href="home.html" class="back-arrow">Volver</a>
 <main id="home" class="main-facturacion">
     <h1>Facturas del Cliente</h1>
     <div class="table-container">
@@ -104,7 +99,7 @@ $conn->close();
         <ul>
             <li><a href="../admin.php">Inicio</a></li>
             <li><a href="../soporte.html">Soporte</a></li>
-            <li><a href="../logout.php">Cerrar Sesión</a></li>
+            <li><a href="../../logout.php">Cerrar Sesión</a></li>
         </ul>
     </nav>
     <p>Todos los derechos reservados © Universidad Tecnologica de Panama 2024</p>

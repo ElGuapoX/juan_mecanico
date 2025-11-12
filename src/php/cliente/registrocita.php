@@ -4,7 +4,8 @@ include_once '../../bd/bd.php';
 
 // Verificar si el usuario ha iniciado sesión
 if (!isset($_SESSION['usuario_id'])) {
-    header("Location: ../../login.html");
+    // Redirigir al login y solicitar volver a registro de cita tras login
+    header("Location: ../../index.html?next=registrocita");
     exit();
 }
 
@@ -36,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $result = $stmt->execute();
 
                 if ($result) {
-                    echo "<script>alert('Cita registrada exitosamente.'); window.location.href='../../views/cliente/home.php';</script>";
+                    echo "<script>alert('Cita registrada exitosamente.'); window.location.href='home.html';</script>";
                     exit();
                 } else {
                     echo "<script>alert('Error al registrar la cita. Por favor, inténtalo nuevamente.');</script>";
@@ -67,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body id="home">
 <nav>
     <div class="nav-logo">
-        <a href="home.php">
+        <a href="home.html">
             <img src="../../images/logo.png">
         </a>
     </div>

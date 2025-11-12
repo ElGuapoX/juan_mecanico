@@ -31,7 +31,7 @@
 
         <!-- Formulario de Login -->
         <div class="form-container sign-in">
-            <form action="php/login.php" method="post">
+            <form action="login.php" method="post">
                 <h1>Login</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -65,5 +65,40 @@
     </div>
 
     <script src="js/script.js"></script>
+    <script>
+        // Si la URL contiene ?next=..., anexar ese valor al action del formulario de login
+        (function(){
+            try {
+                var params = new URLSearchParams(window.location.search);
+                var next = params.get('next');
+                if (next) {
+                    var loginForm = document.querySelector('.sign-in form');
+                    if (loginForm) {
+                        // Añadir ?next=... al action para que el servidor lo reciba en login.php
+                        var action = loginForm.getAttribute('action') || 'login.php';
+                        if (action.indexOf('?') === -1) {
+                            loginForm.setAttribute('action', action + '?next=' + encodeURIComponent(next));
+                        } else {
+                            loginForm.setAttribute('action', action + '&next=' + encodeURIComponent(next));
+                        }
+                    }
+                    // Mostrar mensaje informativo sobre el destino después del login
+                    try {
+                        var signIn = document.querySelector('.sign-in');
+                        if (signIn) {
+                            var note = document.createElement('div');
+                            note.className = 'login-note';
+                            note.style.cssText = 'background:#fff4e5;border:1px solid #ffd8a8;padding:10px;margin-bottom:12px;border-radius:4px;color:#5a3b00;';
+                            note.textContent = 'Debes iniciar sesión para continuar con: ' + next + '. Serás redirigido después del login.';
+                            // Insertar antes del formulario
+                            signIn.insertBefore(note, signIn.firstChild);
+                        }
+                    } catch (e) {}
+                }
+            } catch (e) {
+                /* no crítico */
+            }
+        })();
+    </script>
 </body>
 </html>

@@ -23,11 +23,11 @@ if (isset($_POST['nombre']) && !empty($_POST['nombre']) &&
     $stmt->bind_param("sssss", $nombre, $apellido, $email, $contrasena, $telefono);
 
     // Ejecutar la consulta y verificar éxito
-    if ($stmt->execute()) {
-        echo "<script>
-                alert('Usuario registrado exitosamente');
-                window.location.href = '../login.html';
-              </script>";
+        if ($stmt->execute()) {
+                echo "<script>
+                                alert('Usuario registrado exitosamente');
+                                window.location.href = 'index.html';
+                            </script>";
     } else {
         echo "Error al registrar el usuario: " . $stmt->error;
     }

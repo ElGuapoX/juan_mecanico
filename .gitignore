@@ -1,0 +1,6 @@
+# Ignorar archivo de entorno con credenciales
+.env
+
+# Node / other common ignores (no node here but safe)
+node_modules/
+.DS_Store

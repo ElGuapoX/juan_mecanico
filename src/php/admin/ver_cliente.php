@@ -4,7 +4,7 @@ include_once '../../bd/bd.php';
 
 // Verificar si el usuario ha iniciado sesión
 if (!isset($_SESSION['usuario_id'])) {
-    header("Location: login.html"); 
+    header("Location: ../../index.html"); 
     exit();
 }
 
@@ -43,7 +43,7 @@ $conn->close();
 <body>
 <header>
     <div class="header-content">
-        <a href="../admin.php"><img src="../images/con_fondo-removebg-preview (1).png" alt="Logo Juan Mecanico" class="logo"></a>
+    <a href="admin.php"><img src="../../images/con_fondo-removebg-preview (1).png" alt="Logo Juan Mecanico" class="logo"></a>
         <div class="contact-info">Contactanos: 1234-5678  /  5678-1234</div>
         <div class="hours">Horario de atención: lunes a sábado de 8:00 am a 6:00 pm</div>
     </div>
@@ -54,9 +54,9 @@ $conn->close();
             <a href="ver_calendario.php">Consultar Calendario de Citas</a>
             <a href="detalle_cliente.php">Lista de Clientes</a>
             <a href="ver_mecanicos.php">Lista de Mecánicos</a>
-            <a href="../registromecanico.html">Registro de Mecánico</a>
+            <a href="registro_mecanico.php">Registro de Mecánico</a>
             <a href="../php/facturacion.php">Facturación</a>
-            <a href="../logout.php">Cerrar Sesión</a>
+            <a href="../../logout.php">Cerrar Sesión</a>
         </div>
     </div>
 </header>
@@ -109,7 +109,7 @@ $conn->close();
         <ul>
             <li><a href="../admin.php">Inicio</a></li>
             <li><a href="../soporte.html">Soporte</a></li>
-            <li><a href="../logout.php">Cerrar Sesión</a></li>
+            <li><a href="../../logout.php">Cerrar Sesión</a></li>
         </ul>
     </nav>
     <p>Todos los derechos reservados © Universidad Tecnologica de Panama 2024</p>

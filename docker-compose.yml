@@ -9,3 +9,39 @@ services:
     volumes:
       - ./src:/var/www/html      # Sincroniza tu código local (verás cambios al instante)
     restart: always
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASS: "${MYSQL_ROOT_PASSWORD:-root}"
+      DB_NAME: juan_mecanico
+
+  db:
+    image: mysql:8.0
+    container_name: juan_mecanico_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD:-root}"
+      MYSQL_DATABASE: "juan_mecanico"
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./src/bd/bd-juan_mecanico.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - db_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: juan_mecanico_phpmyadmin
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8081:80" # Accede a phpMyAdmin en http://localhost:8081
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: "${MYSQL_ROOT_PASSWORD:-root}"
+
+volumes:
+  db_data:

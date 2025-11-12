@@ -33,11 +33,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bind_param("sssssss", $nombre, $apellido, $ciudad, $email, $provincia, $barrio, $cedula);
 
             // Ejecutar la consulta
-            if ($stmt->execute()) {
-                echo "<script>
-                alert('Mecánico registrado exitosamente');
-                window.location.href = '../php/ver_mecanicos.php';
-              </script>";
+                                if ($stmt->execute()) {
+                                echo "<script>
+                                alert('Mecánico registrado exitosamente');
+                                window.location.href = 'ver_mecanicos.php';
+                            </script>";
             } else {
                 throw new Exception("Error al registrar el mecánico: " . $stmt->error);
             }
@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body id="home" class="fondo-registromecanico">
     <header>
         <div class="header-content">
-            <img src="images/con_fondo-removebg-preview (1).png" alt="Logo Juan Mecanico" class="logo">
+            <img src="../../images/con_fondo-removebg-preview (1).png" alt="Logo Juan Mecanico" class="logo">
             <div class="contact-info">Contactanos: 1234-5678  /  5678-1234</div>
             <div class="hours">Horario de atención: lunes a sábado de 8:00 am a 6:00 pm</div>
         </div>
@@ -79,12 +79,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button class="dropbtn">&#9776; Opciones</button>
             <div class="dropdown-content">
                 <a href="admin.php">Inicio</a>
-                <a href="php/ver_calendario.php">Consultar Calendario de Citas</a>
-                <a href="php/detalle_cliente.php">Lista de Clientes</a>
-                <a href="php/ver_mecanicos.php">Lista de Mecánicos</a>
-                <a href="registromecanico.html">Registro de Mecánico</a>
-                <a href="php/facturacion.php">Facturación</a>
-                <a href="logout.php">Cerrar Sesión</a>
+                <a href="ver_calendario.php">Consultar Calendario de Citas</a>
+                <a href="lista_clientes.php">Lista de Clientes</a>
+                <a href="ver_mecanicos.php">Lista de Mecánicos</a>
+                <a href="registro_mecanico.php">Registro de Mecánico</a>
+                <a href="facturacion.php">Facturación</a>
+                <a href="../../logout.php">Cerrar Sesión</a>
             </div>
         </div>
     </header>
@@ -94,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <section class="form-content">
         <h2>Registro Mecanico</h2>
         <p>Complete el siguiente formulario para registrar un Mecanico</p>
-        <form id="registro" action="php/registro_mecanico.php" method="post">
+    <form id="registro" action="registro_mecanico.php" method="post">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
 
@@ -136,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <ul>
             <li><a href="admin.php">Inicio</a></li>
             <li><a href="soporte.html">Soporte</a></li>
-            <li><a href="logout.php">Cerrar Sesión</a></li>
+            <li><a href="../../logout.php">Cerrar Sesión</a></li>
         </ul>
     </nav>
     <p>Todos los derechos reservados © Universidad Tecnologica de Panama 2024</p>

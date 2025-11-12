@@ -5,6 +5,11 @@ include_once 'bd/bd.php';
 $db = new Database();
 $con = $db->connect();
 
+// Si la petición incluye un destino (p.ej. ?next=registrocita), lo guardamos en sesión
+if (isset($_GET['next']) && !empty($_GET['next'])) {
+    $_SESSION['return_to'] = $_GET['next'];
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Validar datos de entrada
     $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
@@ -38,11 +43,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $updateSession->bind_param("i", $user['ID_CLIENTE']);
                 $updateSession->execute();
 
-                // Redirigir según el rol
+                // Redirigir según el rol o al destino solicitado (guardado en sesión)
+                $next = isset($_SESSION['return_to']) ? $_SESSION['return_to'] : null;
                 if ($user['ROL'] === 'administrador') {
-                    header("Location: ../admin.php");
+                    header("Location: php/admin/admin.php");
                 } else {
-                    header("Location: ../home.php");
+                    // Si hay un destino solicitado y es 'registrocita', redirigir ahí
+                    if ($next === 'registrocita') {
+                        // Limpiamos la variable de sesión después de usarla
+                        unset($_SESSION['return_to']);
+                        header("Location: php/cliente/registrocita.php");
+                    } else {
+                        header("Location: php/cliente/home.html");
+                    }
                 }
                 exit;
             } else {
