@@ -1,0 +1,140 @@
+/* Styles for registrocita.php - appointment registration form
+   Page-specific layout + overrides. Shared form controls are imported
+   from `forms.css` to keep form styles consistent across the site. */
+@import url('../css/forms.css');
+
+body#home{
+  background: #18181B;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+}
+
+/* Main form container */
+.form-content{
+  max-width: var(--max-width);
+  margin: 48px auto;
+  background: linear-gradient(180deg, rgba(9,10,12,0.6), rgba(12,14,18,0.6));
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+  border-radius: var(--radius);
+  padding: 28px 34px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.form-content h2{
+  margin: 0 0 6px 0;
+  font-size: 1.6rem;
+  letter-spacing: -0.2px;
+  color: #fff;
+}
+.form-content p{
+  margin: 0 0 18px 0;
+  color: var(--muted);
+}
+
+.form-content form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 18px;
+  align-items: center;
+}
+
+.form-content label{
+  display: block;
+  font-size: 0.95rem;
+  margin: 0; /* remove bottom margin so label sits beside the input in the grid */
+  color: #e5e7eb;
+  align-self: center; /* vertically center within the grid cell */
+  padding-right: 8px;
+}
+
+/* Page-specific form overrides:
+   - Keep selects on this page white for readability
+   - Keep inputs vertically aligned with labels inside .form-content grid
+*/
+.form-content select,
+.form-content select.form-select{
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+}
+
+.form-content input[type="date"],
+.form-content input[type="time"]{
+  align-self: center;
+}
+
+/* Keep select box white at all times (including focus/hover/active) */
+.form-content select:focus,
+.form-content select:hover,
+.form-content select:active{
+  box-shadow: 0 6px 20px rgba(29,78,216,0.12);
+  border-color: var(--primary);
+  background: #ffffff;
+  color: #111827;
+}
+
+/* Ensure option text is readable (black) when dropdown is opened */
+.form-content select option{
+  color: #111827;
+  background: #ffffff;
+}
+
+/* Make labels and inputs span both columns when needed */
+.form-content label[for="servicio"],
+.form-content select[name="servicio"],
+.form-content input.submit-button{
+  grid-column: 1 / -1;
+}
+
+/* Submit button */
+.submit-button{
+  display: inline-block;
+  padding: 12px 18px;
+  background: linear-gradient(90deg, var(--primary), #0877b3 60%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  transition: transform .08s ease, box-shadow .12s ease, opacity .12s ease;
+  box-shadow: 0 6px 18px rgba(29,78,216,0.12);
+}
+.submit-button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(29,78,216,0.18);
+}
+
+/* Responsive: single column on small screens */
+@media (max-width: 680px){
+  .form-content{
+    margin: 20px 16px;
+    padding: 20px;
+  }
+  .form-content form{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tweak footer appearance for this page */
+footer.container{
+  margin-top: 40px;
+  background: transparent;
+  padding: 28px 24px;
+}
+footer.container .column .logo img{
+  max-width: 140px;
+}
+
+/* Small utility */
+.center{
+  text-align: center;
+}
+
+/* Accessibility: focus styles for keyboard users */
+.form-content input:focus, .form-content select:focus, .submit-button:focus{
+  outline: 3px solid rgba(14,118,168,0.12);
+  outline-offset: 2px;
+}

@@ -64,6 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Juan Mecanico</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/registrocita.css">
 </head>
 <body id="home">
 <nav>
@@ -92,13 +93,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p>Seleccione la fecha y hora para su cita:</p>
             <form action="" method="post">
                 <label for="fecha">Fecha de la cita:</label>
-                <input type="date" name="fecha" id="fecha" required><br>
+                <input class="form-control" type="date" name="fecha" id="fecha" required><br>
 
                 <label for="hora">Hora de la cita:</label>
-                <input type="time" name="hora" id="hora" required><br>
+                <input class="form-control" type="time" name="hora" id="hora" required><br>
 
                 <label for="servicio">Servicio:</label>
-                <select name="servicio" id="servicio" required>
+                <select class="form-select" name="servicio" id="servicio" required>
                     <option value="Seleccione">Seleccione una opción</option>
                     <option value="1">Diagnóstico General</option>
                     <option value="2">Mantenimiento</option>

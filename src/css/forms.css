@@ -1,0 +1,109 @@
+/* Shared form styles for the site - forms.css
+   This file contains generic form variables and control styles used
+   by page-specific CSS (e.g. registrocita.css). Keep this file as the
+   single source of form truth to maintain consistent inputs/selects.
+*/
+:root{
+  --form-bg-dark: rgba(255,255,255,0.02);
+  --form-bg-dark-focus: rgba(255,255,255,0.03);
+  --form-bg-light: #ffffff;
+  --primary: #1d4ed8;
+  --muted: #9ca3af;
+  --radius: 10px;
+  --input-border-dark: rgba(255,255,255,0.06);
+  --input-border-light: #e5e7eb;
+  --input-color-light: #111827;
+}
+
+/* Generic label style (can be overridden per page) */
+.form-label{
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #e5e7eb;
+}
+
+/* Generic form control defaults (dark-themed) */
+.form-control,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select,
+textarea{
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--input-border-dark);
+  border-radius: 8px;
+  background: var(--form-bg-dark);
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: box-shadow .15s ease, border-color .15s ease, background .12s ease;
+}
+
+/* Make selects visually separate when desired: add class .form-select on page if you want white background */
+.form-select,
+select.form-select{
+  background: var(--form-bg-light);
+  color: var(--input-color-light);
+  border: 1px solid var(--input-border-light);
+}
+
+/* Focus styles for all form controls */
+.form-control:focus,
+select:focus,
+textarea:focus,
+.form-select:focus{
+  box-shadow: 0 6px 20px rgba(29,78,216,0.12);
+  border-color: var(--primary);
+  background: var(--form-bg-dark-focus);
+}
+
+/* If a select uses the white style keep it white on focus */
+.form-select:focus{
+  background: var(--form-bg-light);
+  color: var(--input-color-light);
+}
+
+/* Submit button shared style (page may override if needed) */
+.submit-button,
+button.submit-button{
+  display: inline-block;
+  padding: 12px 18px;
+  background: linear-gradient(90deg, var(--primary), #0877b3 60%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  transition: transform .08s ease, box-shadow .12s ease, opacity .12s ease;
+  box-shadow: 0 6px 18px rgba(29,78,216,0.12);
+}
+.submit-button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(29,78,216,0.18);
+}
+
+/* Native picker icon tweaks for WebKit browsers so icons show light/white on dark inputs */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator{
+  filter: invert(1) brightness(2) saturate(1);
+}
+
+/* Hint to Firefox to prefer the dark UI for native controls */
+input[type="date"],
+input[type="time"]{
+  color-scheme: dark;
+}
+
+/* Option styling for selects (note: some browsers ignore option styling)
+   Keep simple: white background + dark text when using .form-select */
+select.form-select option{
+  color: var(--input-color-light);
+  background: var(--form-bg-light);
+}
