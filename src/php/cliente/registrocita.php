@@ -74,10 +74,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </a>
     </div>
     <ul class="nav-links">
-        <li class="link"><a href="home.html">Home</a></li>
-        <li id="link1" class="link"><a href="#">Features</a></li>
+        <li class="link"><a href="home.html">Inicio</a></li>
+        <li id="link1" class="link"><a href="nosotros.html">Nosotros</a></li>
         <li id="link2" class="link"><a href="servicios.html">Servicios</a></li>
-        <li id="link3" class="link"><a href="#">Informacion</a></li>
+        <li id="link3" class="link"><a href="informacion.html">Informacion</a></li>
     </ul>
     <a href="registrocita.php" class="btn">Obten una cita</a>
 </nav>
@@ -93,10 +93,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p>Seleccione la fecha y hora para su cita:</p>
             <form action="" method="post">
                 <label for="fecha">Fecha de la cita:</label>
-                <input class="form-control" type="date" name="fecha" id="fecha" required><br>
+                <input class="form-control" type="date" name="fecha" id="fecha" required>
 
                 <label for="hora">Hora de la cita:</label>
-                <input class="form-control" type="time" name="hora" id="hora" required><br>
+                <input class="form-control" type="time" name="hora" id="hora" required>
 
                 <label for="servicio">Servicio:</label>
                 <select class="form-select" name="servicio" id="servicio" required>

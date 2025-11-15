@@ -1,0 +1,87 @@
+/* Styles specific to the Nosotros page
+   Keeps layout consistent with the site's visual language.
+*/
+
+.about-hero{
+  display:flex;
+  gap:28px;
+  align-items:center;
+  margin:48px auto;
+  max-width:var(--max-width);
+  padding: 0 20px;
+}
+.about-hero img{
+  width:360px;
+  max-width:40%;
+  border-radius:12px;
+  object-fit:cover;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+.about-hero .lead{
+  margin-top: 100px;
+  max-width:60%;
+  color:var(--muted);
+}
+
+.values{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:20px;
+}
+.value-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:18px;
+  border-radius:12px;
+  border: 1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 6px 18px rgba(2,6,23,0.45);
+  background-color: white;
+}
+.value-card h3{margin:0 0 8px 0}
+
+.servicios-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-top:20px;
+}
+.cuadro{
+  background:#ffffff;
+  color:#111827;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow: 0 8px 22px rgba(2,6,23,0.25);
+  border: 2px solid rgba(4,120,255,0.08);
+}
+.cuadro h2{margin-top:0}
+
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-top:12px;
+  margin: 100px;
+}
+.team-card{
+  background: #ffffff;
+  color: var(--muted);
+  padding:22px;
+  border-radius:10px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 8px 22px rgba(2,6,23,0.25);
+  margin-bottom: 100px;
+}
+.team-card h3{color:#000000;margin-bottom:6px}
+
+
+/* Minor utility */
+.center{ text-align:center }
+
+
+
+.bckgr-nosotros{
+  background: #585858;
+}

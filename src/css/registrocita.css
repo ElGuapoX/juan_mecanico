@@ -59,9 +59,14 @@ body#home{
   border: 1px solid #e5e7eb;
 }
 
-.form-content input[type="date"],
+.form-content input[type="date"]{
+  align-self: center;
+  justify-self: start; /* keep date input at the left side of its grid cell */
+}
+
 .form-content input[type="time"]{
   align-self: center;
+  justify-self: end; /* align the time selector to the right */
 }
 
 /* Keep select box white at all times (including focus/hover/active) */
